@@ -5,9 +5,6 @@ const path = require('path');
 // guardamos en un constante app la funcionalidad de express()
 const app = express();
 
-// definimos el puerto en el que se va a levantar el servidor
-const port = 3000;
-
 // definimos las rutas para los archivos estáticos(públicos) y otra para las vistas
 const viewsPath = path.join(__dirname, 'views');
 const publicPath = path.join(__dirname, 'public');
@@ -26,5 +23,10 @@ app.get('/register', (req, res) => res.sendFile(path.join(viewsPath, 'register.h
 // Definimos la ruta que responda a GET "/login" con la vista register.html
 app.get('/login', (req, res) => res.sendFile(path.join(viewsPath, 'login.html')));
 
+// definimos el puerto en el que se va a levantar el servidor
+const port = process.env.PORT || 3000;
+
 // Levantamos el servidor con app.listen(port)
-app.listen(port, () => console.log(`Servidor corriendo en el puerto ${port}!`));
+app.listen(port, () => {
+    console.log("Servidor corriendo en el puerto " + port);
+})

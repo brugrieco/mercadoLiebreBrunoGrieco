@@ -70,16 +70,16 @@ header figure.logo{
 }
 
 /* Clase 14 - Micro desafío 3 */
-header .form{
+header form{
     width: 50%;
-    max-width: 280px;
+    max-width: 290px;
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
     align-items: stretch;
 }
 
-header .form .input{
+header form .input{
     display: inline-block;
     font-size: 12px;
     padding: 8px 10px;
@@ -92,7 +92,7 @@ header .form .input{
     color: #666;
 }
 
-header .form .submit{
+header form .submit{
     display: inline-block;
     font-size: 12px;
     padding: 8px;
@@ -240,6 +240,37 @@ main section article i,
 /* Clase 15 - Code Review */
 /* Estilos del register.html */
 
+main form.register-form, main h2.register-title{
+    width: 50%;
+    max-width: 600px;
+    margin: 0px auto;
+}
+main form.register-form input,  main form.register-form button{
+    width:100%;
+    height: 30px;
+    margin: 10px 0px;
+    border-style: none;
+    border-radius: 5px;
+}
+
+main h2.register-title {
+    margin: 10px auto;
+    text-align: center;
+}
+
+
+
+main form.register-form div.form-div label input, main form.register-form div.form-div ul li input{
+    width: auto;
+    height: auto;
+}
+
+
+main form.register-form button {
+    background-color: #0331ea;
+    color: #fff;
+    font-weight: bold;
+}
 /* Micro-Desafío 3 - input:focus */
 /* El selector > permite modificar a los elementos hijos directos de un contenedor padre */
 /* En este caso a todos los inputs que sean hijos directos de un contenedor .form-div*/
@@ -248,6 +279,29 @@ form.register-form .form-div>input:focus{
 }
 
 /* Estilos del login.html */
+main form.login-form, main h2.login-title{
+    width: 50%;
+    max-width: 600px;
+    margin: 0px auto;
+}
+main form.login-form input,  main form.login-form button{
+    width:100%;
+    height: 30px;
+    margin: 10px 0px;
+    border-style: none;
+    border-radius: 5px;
+}
+
+main h2.login-title {
+    margin: 10px auto;
+    text-align: center;
+}
+
+main form.login-form button {
+    background-color: #0331ea;
+    color: #fff;
+    font-weight: bold;
+}
 
 /* Micro-Desafío 3 - input:focus */
 form.login-form .form-div input:focus{
@@ -268,7 +322,22 @@ form.login-form .form-div input::placeholder{
     background-color: #0331ea;
 }
 
+footer {
+    text-align: center;
+    background-color: #fff;
+}
 
+footer .fas {
+    font-size: 2em;
+    color: #03264C;
+    margin-bottom: 10px;
+}
+
+footer article {
+    margin: 0px auto;
+    padding: 20px 0px;
+    width: 75%;
+}
 /* media query para navegación en tablets */
 @media (min-width: 480px){
   
@@ -325,7 +394,16 @@ form.login-form .form-div input::placeholder{
     }
 
     /* Clase 14 - Code Review */
+    header nav {
+        display: flex;   
+        justify-content: space-between;    
+    }
 
+    header nav ul {
+        display: flex;   
+        justify-content: space-around;
+        width: 265px;
+    }
 
     /* Clase 15 - Code Review */
 
@@ -340,10 +418,44 @@ form.login-form .form-div input::placeholder{
     }
 
     /* Clase 14 - Code Review */
+    header div.top-header{
+        max-width: 960px;
+        margin: 0px auto;
+        padding-bottom: 10px;
+    }
+    header div.top-header p  {
+        width: auto;    
+    }
+
+    header div.top-header form  {
+        justify-content: center;
+    }
+
+    header nav ul {
+        margin: 0px 30px;
+        width: 300px;
+    }
+
 
     
     /* Clase 15 - Code Review */
 
+
+    /* Clase 16 - Code Review */
+    footer div{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        margin-bottom: 10px;
+    }
+
+    footer article {
+        width: 24%;
+    }
+
+    footer .fas:hover {
+        color:#0331ea;
+    }
 }
 
 
